@@ -1,0 +1,7 @@
+tasks:
+  -
+    name: example_task
+    language: Bash
+    default: true
+    code: |
+      echo "Hello Kris!"
