@@ -5,3 +5,8 @@ tasks:
     default: true
     code: |
       echo "Hello Kris!how are your yy going with your 6666"
+    if:
+      language: Raku
+      code: |
+        say "skip this task ...";
+        update_state %( status => "skip")
