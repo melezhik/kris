@@ -8,5 +8,5 @@ tasks:
     if:
       language: Raku
       code: |
-        say "skip this task ...";
-        update_state %( status => "skip")
+        #say "skip this task ...";
+        #update_state %( status => "skip")
