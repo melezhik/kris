@@ -8,16 +8,15 @@ tasks:
       message=$(config message)
       echo "Hello Kris! I say [$message]"
     generator:
-      name: test
       language: Raku
       code: |
         update_state %(
           list => [
               %(
-                config => "How"
+                config =>  { message => "How" },
               ),
               %(
-                config => "are you?"
+                config => { message => "are you?" },
               ),            
           ]
         );
