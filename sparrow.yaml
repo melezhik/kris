@@ -4,7 +4,7 @@ tasks:
     language: Bash
     default: true
     code: |
-      echo "Hello Kris!how are your yy going with your 6666"
+      echo "Hello Kris! how are you?"
     if:
       language: Raku
       code: |
