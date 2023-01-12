@@ -1,12 +1,23 @@
 tasks:
   -
-    name: example_task
+    name: main
     language: Bash
     default: true
     code: |
-      echo "Hello Kris! how are you?"
-    if:
+      set -e
+      message=$(config message)
+      echo "Hello Kris! I say [$message]"
+    generator:
+      name: test
       language: Raku
       code: |
-        #say "skip this task ...";
-        #update_state %( status => "skip")
+        update_state %(
+          list => [
+              %(
+                config => "How"
+              ),
+              %(
+                config => "are you?"
+              ),            
+          ]
+        );
