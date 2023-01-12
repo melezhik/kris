@@ -4,7 +4,7 @@ tasks:
     language: Raku
     default: true
     code: |
-      say "Hello Kris! You say [{config()<message>]";
+      say "Hello Kris! You say [{config()<message>}]";
       update_state %( MessagE => "///{config()<message>}///" );
     generator:
       language: Raku
