@@ -1,12 +1,11 @@
 tasks:
   -
     name: main
-    language: Bash
+    language: Raku
     default: true
     code: |
-      set -e
-      message=$(config message)
-      echo "Hello Kris! I say [$message]"
+      say "Hello Kris! You say [{config()<message>]";
+      update_state %( MessagE => "///{config()<message>}///" );
     generator:
       language: Raku
       code: |
@@ -26,6 +25,9 @@ tasks:
   -
     name: dump
     language: Raku
+    config:
+      foo: bar
     code: |
+      say config()<foo>;
       say config()<tasks>.perl;
-      say config()<patent>.perl;
+      say config()<parent>.perl;
