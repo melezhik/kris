@@ -20,3 +20,12 @@ tasks:
               ),            
           ]
         );
+    followup:
+      -
+        name: dump
+  -
+    name: dump
+    language: Raku
+    code: |
+      say config()<tasks>.perl;
+      say config()<patent>.perl;
