@@ -2,11 +2,18 @@ tasks:
   -
     name: main
     language: Raku
-    default: true
+    code: |
+      say config().perl;
+    depends:
+      -
+        name: task1
+  -
+    name: task1
+    language: Raku
     code: |
       say "Hello Kris! You say [{config()<message>}]";
-      update_state %( MessagE => "///{config()<message>}///" );
-    generator:
+      update_state %( MessagE => [config()<message>}]" );
+    hub:
       language: Raku
       code: |
         update_state %(
@@ -29,5 +36,4 @@ tasks:
       foo: bar
     code: |
       say config()<foo>;
-      say config()<tasks>.perl;
       say config()<parent>.perl;
