@@ -2,6 +2,7 @@ tasks:
   -
     name: main
     language: Raku
+    default: true
     code: |
       say config().perl;
     depends:
