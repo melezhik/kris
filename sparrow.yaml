@@ -13,7 +13,7 @@ tasks:
     language: Raku
     code: |
       say "Hello Kris! You say [{config()<message>}]";
-      update_state %( MESSAGE => [{config()<message>}]" );
+      update_state %( MESSAGE => "[{config()<message>}]" );
     hub:
       language: Raku
       code: |
