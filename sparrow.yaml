@@ -4,7 +4,9 @@ tasks:
     language: Raku
     default: true
     code: |
-      say config().perl;
+      for config()<tasks><task1><state><> -> $i {
+        say $i.perl;
+      }
     depends:
       -
         name: task1
