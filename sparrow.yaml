@@ -5,7 +5,7 @@ tasks:
     default: true
     code: |
       for config()<tasks><task1><state><> -> $i {
-        say $i.perl;
+        say $i<MESSAGE>
       }
     depends:
       -
